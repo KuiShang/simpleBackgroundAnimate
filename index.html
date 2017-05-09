@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        /* .center{
+            width:100%;
+            height: 100%;
+            position: relative;
+        } */
+        .slide {
+            position: fixed;
+            top: 0px;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 230px;
+            overflow: hidden;
+            background: #4B84F9;
+            background: -prefix-linear-zgradient(top, #4B84F9 75px, #6573FD);
+            background: -webkit-linear-gradient(top, #4B84F9 75px, #6573FD);
+        }
+        .slide div {
+            width: 200%;
+            position: absolute;
+            top: 0;
+        }
+        .slide .inside {
+            height: 100%;
+            left: -280px;
+            background: url(water2.png) repeat-x left bottom;
+            -webkit-animation: 3s linear water2 infinite paused;
+            -moz-animation: 3s linear water2 infinite paused;
+            animation: 3s linear water2 infinite paused;
+        }
+        .slide .outside {
+            height: 100%;
+            left: 0;
+            background: url(water1.png) repeat-x left bottom;
+            -webkit-animation: 7s linear water1 infinite paused;
+            -moz-animation: 7s linear water1 infinite paused;
+            animation: 7s linear water1 infinite paused;
+        }
+        .slide:hover .outside {
+            -webkit-animation-play-state: running;
+            -moz-animation-play-state: running;
+            animation-play-state: running;
+        }
+        .slide:hover .inside {
+            -webkit-animation-play-state: running;
+            -moz-animation-play-state: running;
+            animation-play-state: running;
+        }
+        /* .slide:hover .inside{
+            top:-10px;
+            left:-50%;
+        }
+        .slide:hover .outside{
+            top:10px;
+            left:-10%;
+        } */
+        @-webkit-keyframes water1 {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: -500px;
+            }
+        }
+        @-moz-keyframes water1 {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: -500px;
+            }
+        }
+        @keyframes water1 {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: -500px;
+            }
+        }
+        @-webkit-keyframes water2 {
+            0% {
+                left: -280px;
+            }
+            100% {
+                left: -840px;
+            }
+        }
+        @-moz-keyframes water2 {
+            0% {
+                left: -280px;
+            }
+            100% {
+                left: -840px;
+            }
+        }
+        @keyframes water2 {
+            0% {
+                left: -280px;
+            }
+            100% {
+                left: -840px;
+            }
+        }
+        .information {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            min-width: 700px;
+            overflow: auto;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="inside"></div>
+        <div class="outside"></div>
+    </div>
+</body>
+</html>
